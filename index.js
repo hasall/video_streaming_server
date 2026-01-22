@@ -47,9 +47,9 @@ app.get("/", (req, res) => {
 app.get("/del", function (req, res) {
     const range = req.headers.range;
     const videoPath = req.query.video
-    if (!range) {
-        res.status(400).send("Requires Range header");
-    }
+
+    console.log(videoPath);
+    console.log(videoPath.replace(dir, dir_removed));
 
     fs.rename(videoPath, videoPath.replace(dir, dir_removed), function (err) {
         if (err) throw err
