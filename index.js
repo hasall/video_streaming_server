@@ -3,8 +3,8 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 
-const dir = "./../videos/";
-const dir_removed = "./../videos_removed/"
+const dir = "../videos/";
+const dir_removed = "../videos_removed/"
 
 const { readdir } = require('node:fs/promises');
 const { join } = require('node:path');
