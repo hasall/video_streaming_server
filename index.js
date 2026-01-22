@@ -33,7 +33,7 @@ const asyncGetAllFiles = (res) => {
         const allFilesList = allFiles.flat(Number.POSITIVE_INFINITY);
         let fileHtml = "";
         allFilesList.forEach(file => {
-            fileHtml += `<a href="/player?del=${file}">del</a> | <a href="/player?video=${file}">${file}</a><br>`;
+            fileHtml += `<a href="/del?video=${file}">del</a> | <a href="/player?video=${file}">${file}</a><br>`;
         });
         res.send(fileHtml);
     });
