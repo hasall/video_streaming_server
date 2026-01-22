@@ -56,7 +56,7 @@ app.get("/del", function (req, res) {
         console.log('Successfully renamed - AKA moved!')
     })
 
-    asyncGetAllFiles(res);
+    res.redirect('/');
 });
 
 app.get("/video", function (req, res) {
